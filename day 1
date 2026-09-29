@@ -1,0 +1,177 @@
+What is Cloud Computing?
+IaaS, PaaS, SaaS
+Public vs Private vs Hybrid Cloud
+AWS Regions & Availability Zones
+AWS Global Infrastructure
+Shared Responsibility Model
+Basic AWS pricing
+AWS Free Tier
+-------------------------------
+AWS Basics – Interview Questions & Answers
+
+These are simple, interview-ready answers for your 1+ year experience level.
+
+1. What is Cloud Computing?
+
+Answer:
+Cloud computing is the delivery of computing resources such as servers, storage, databases, networking, and applications over the internet on a pay-as-you-go basis.
+
+Example: Instead of buying a physical server, we can create an EC2 server in AWS whenever we need it.
+
+2. What are IaaS, PaaS, and SaaS?
+
+Answer:
+
+Model	Meaning	Example
+IaaS	Infrastructure as a Service	AWS EC2
+PaaS	Platform as a Service	AWS Elastic Beanstalk
+SaaS	Software as a Service	Gmail, Microsoft 365
+
+Simple way to remember:
+
+IaaS → We manage OS and applications.
+PaaS → Cloud provider manages infrastructure and OS; we focus mainly on application.
+SaaS → We simply use the software.
+3. What is Public, Private, and Hybrid Cloud?
+
+Answer:
+
+Public Cloud:
+Cloud resources are provided by a cloud provider over the internet and shared among customers.
+
+Example: AWS, Azure, Google Cloud.
+
+Private Cloud:
+Cloud infrastructure is dedicated to a single organization.
+
+Hybrid Cloud:
+Combination of public cloud + private/on-premises infrastructure.
+
+Example:
+
+On-Premises
+     |
+     | VPN
+     |
+AWS Cloud
+4. What are AWS Regions and Availability Zones?
+
+Answer:
+An AWS Region is a separate geographical area where AWS has infrastructure.
+
+An Availability Zone (AZ) is an isolated location within an AWS Region containing one or more data centers.
+
+Example:
+
+AWS Region: Mumbai
+
+   ├── AZ 1
+   ├── AZ 2
+   └── AZ 3
+
+Interview point:
+We use multiple Availability Zones to improve high availability and fault tolerance.
+
+5. What is AWS Global Infrastructure?
+
+Answer:
+AWS Global Infrastructure is the worldwide infrastructure used by AWS to provide cloud services.
+
+It includes:
+
+Regions
+Availability Zones
+Edge Locations
+Local Zones
+AWS data centers
+
+Simple example:
+
+AWS Global Infrastructure
+        |
+   ┌────┴────┐
+ Regions   Edge Locations
+    |
+Availability Zones
+6. What is the AWS Shared Responsibility Model?
+
+Answer:
+The Shared Responsibility Model defines what AWS is responsible for and what the customer is responsible for.
+
+AWS responsibility:
+
+Physical data centers
+Physical servers
+Networking infrastructure
+Hardware
+AWS infrastructure security
+
+Customer responsibility:
+
+Operating system security on EC2
+Applications
+Data
+IAM users and permissions
+Security group configuration
+OS patches for EC2
+
+Example:
+For an EC2 Linux server, AWS manages the physical server, but we are responsible for securing and patching the Linux OS.
+
+7. What is AWS Pricing?
+
+Answer:
+AWS generally follows a pay-as-you-go pricing model. We pay for the AWS resources we use.
+
+For example:
+
+EC2 running → charges apply
+EC2 stopped → compute charges stop
+
+However, some resources such as EBS storage, Elastic IP-related charges, and other services can continue to incur charges depending on the configuration.
+
+AWS pricing can depend on:
+
+Service
+Region
+Usage
+Instance type
+Storage
+Data transfer
+Pricing model
+8. What is AWS Free Tier?
+
+Answer:
+AWS Free Tier provides free usage allowances for certain AWS services, subject to the applicable service limits and terms.
+
+It is useful for beginners to practice AWS services without paying for every basic usage scenario.
+
+Important: Free Tier does not mean every AWS service is completely free. If we exceed applicable limits or use resources that aren't covered, charges can occur.
+
+Interview answer:
+
+"AWS Free Tier allows users to use certain AWS services within specified free usage limits, which is useful for learning and testing AWS."
+
+9. What is the difference between a Region and an Availability Zone?
+
+Answer:
+
+Region = Geographic location.
+
+Availability Zone = Isolated infrastructure location inside a Region.
+
+Example:
+
+AWS Region: Hyderabad/Mumbai region conceptually
+        |
+   ┌────┼────┐
+  AZ-A AZ-B AZ-C
+
+Why use multiple AZs?
+
+For:
+
+High availability
+Fault tolerance
+Disaster resilience
+Reduced impact of an AZ failure
